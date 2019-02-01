@@ -32,17 +32,22 @@ def Preprocessing(path, data):
 def Convolutional_Neural_Network():
     model = Sequential()
 
-    model.add(Conv2D(40, kernel_size=5, padding="same", input_shape=(24, 24, 3), activation='relu'))
-    model.add(Conv2D(50, kernel_size=5, padding="valid", activation='relu'))
+    model.add(Conv2D(40, kernel_size=5, padding="same", input_shape=(24, 24, 3)))
+    model.add(Activation('relu'))
+    model.add(Conv2D(50, kernel_size=5, padding="valid"))
+    model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Dropout(0.2))
-    model.add(Conv2D(70, kernel_size=3, padding="same", activation='relu'))
+    model.add(Conv2D(70, kernel_size=3, padding="same"))
+    model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
-    model.add(Conv2D(100, kernel_size=3, padding="valid", activation='relu'))
+    model.add(Conv2D(100, kernel_size=3, padding="valid"))
+    model.add(Activation('relu'))
     model.add(MaxPooling2D(pool_size=(2, 2), strides=(2, 2)))
     model.add(Flatten())
     model.add(Dense(output_dim=500, activation='relu'))
-    model.add(Dense(output_dim=3, input_dim=500, activation='softmax'))
+    model.add(Dense(output_dim=3, input_dim=500))
+    model.add(Activation('softmax'))
     
     return model
 
