@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd 
 import random
 import skimage
-import matplotlib.pyplot as plt
 import keras
 
 from scipy.misc import imread
