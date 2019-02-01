@@ -1,3 +1,3 @@
-# Convolution Neural Network for Age Prediction
+# Age Prediction System Using Convolutional Neural Network
 
-PQR
+This repository contains code for basic age predictor built using keras library
