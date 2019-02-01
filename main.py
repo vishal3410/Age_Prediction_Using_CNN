@@ -3,7 +3,6 @@ import pandas as pd
 import random
 import skimage
 import matplotlib.pyplot as plt
-import tensorflow as tf
 import keras
 
 from scipy.misc import imread
